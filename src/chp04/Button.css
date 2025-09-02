@@ -1,0 +1,27 @@
+button{
+    width: 70px;
+    color: white;
+    margin: 10px;
+    padding: 7px;
+}
+
+.bg-green{
+    background-color: green;
+    border: 3px ridge #ffffff;
+}
+
+.bg-red {
+    background-color: crimson;
+    border: 3px ridge #ffffff;
+}
+
+.bg-blue{
+        background-color: darkblue;
+        border: 3px ridge #ffffff;
+
+}
+
+.contain{
+    border: 1px solid #933cff;
+}
+
