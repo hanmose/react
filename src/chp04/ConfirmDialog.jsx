@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "./Button";
-impor
+import Clock from "../Clock/Clock";
 
 
 function  ConfirmDialog(props){
@@ -11,6 +11,7 @@ function  ConfirmDialog(props){
             <Button color='green'>확인</Button>&nbsp;
             <Button color='blue'>취소</Button>&nbsp;
             <Button color='red'>초기화</Button>&nbsp;
+
         </div>
     )
 }
