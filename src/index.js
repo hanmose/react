@@ -8,6 +8,8 @@ import './chp03/Book.css'
 import './chp04/Button.css'
 import ConfirmDialogs from "./chp04/ConfirmDialogs";
 import Clock from "./Clock/Clock";
+import Comment from "./chp05/exam01/Comment";
+import BookList from "./chp05/exam02/BookList";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,7 +17,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 setInterval(()=>{
     root.render(
         <React.StrictMode>
-            <ConfirmDialogs/>
+            <BookList/>
         </React.StrictMode>
     );
 },1000)
