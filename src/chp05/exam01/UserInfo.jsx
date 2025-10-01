@@ -1,15 +1,17 @@
 import React from "react";
-import Avartar from "./Avartar";
-import './UserInfo.css'
+import Avatar from "./Avatar";
+import './UserInfo.css';
 
-function UserInfo(props){
+function UserInfo(props) {
     return(
         <div className="user-info">
-            <Avartar user={props.user}/>
-            <div className="user-info-name"></div>
-            {props.user.name}
+            <Avatar user={props.user}/>
+            <div className="user-info-name">
+                {props.user.name}
+            </div>
         </div>
-    )
+
+    );
 }
 
 export default UserInfo;

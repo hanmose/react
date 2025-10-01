@@ -36,8 +36,8 @@ class NotificationList extends React.Component{
                     notifications: notifications
                 })
             }else{
-                //     notifications라는 state를 초기화
-                //     Interval 설정을 Clear
+            //     notifications라는 state를 초기화
+            //     Interval 설정을 Clear
                 this.setState({
                     notifications: []
                 });
@@ -58,9 +58,9 @@ class NotificationList extends React.Component{
                 {
                     this.state.notifications.map((notification)=>{
                         return <Notification
-                            key={notification.id}
-                            id={notification.id}
-                            message={notification.message}/>
+                                    key={notification.id}
+                                    id={notification.id}
+                                    message={notification.message}/>
                     })
                 }
             </div>

@@ -7,4 +7,5 @@ function Button(props) {
         </button>
     )
 }
-export default Button
+
+export default Button;

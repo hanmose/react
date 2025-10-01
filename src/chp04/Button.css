@@ -6,22 +6,16 @@ button{
 }
 
 .bg-green{
-    background-color: green;
-    border: 3px ridge #ffffff;
+    background-color: #5cb84c;
+    border: 3px ridge #ffff4c;
 }
 
-.bg-red {
-    background-color: crimson;
-    border: 3px ridge #ffffff;
+.bg-red{
+    background-color: #f13583;
+    border: 3px groove #ffff4c;
 }
 
 .bg-blue{
-        background-color: darkblue;
-        border: 3px ridge #ffffff;
-
+    background-color: #3085f4;
+    border: 3px dotted #ffff4c;
 }
-
-.contain{
-    border: 1px solid #933cff;
-}
-

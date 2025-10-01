@@ -5,7 +5,8 @@ function Book(props) {
     return(
         <div className={"wrapper"}>
             <img className="image"
-                 src={props.coverImage}
+                     src={props.coverImage}
+
             />
             <div className={"contentContainer"}>
                 <span className={"titleText"}>{props.title}</span>

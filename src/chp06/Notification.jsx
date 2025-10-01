@@ -10,11 +10,11 @@ class Notification extends React.Component{
 
     render() {
         return(
-            <div className={"wrapper"}>
+            <div className={"wrapper1"}>
                 <span className={"messageText"}>{this.props.message}</span>
             </div>
-        )
+        );
     }
 }
 
-export default Notification
+export default Notification;
