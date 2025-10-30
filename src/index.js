@@ -3,15 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import CommentList from "./chp05/CommentList";
-import Notification from "./chp06/Notification";
+import MainPageWarning from "./chp09/chp09/ex3/MainPageWarning";
+import Gtoggle from "./chp08/gong/Gtoggle";
+import Gtogglef from "./chp08/gong/Gtogglef";
+import InputTest from "./chp08/gong/InputTest";
+import GComment from "./chp05/exam01/gong/GComment";
 import NotificationList from "./chp06/NotificationList";
-import Counter from "./chp07/exam01/Counter";
 import Accomodate from "./chp07/Accomodate";
-import Toggle from "./chp08/Toggle";
-import MyButton_Argument from "./chp08/MyButton_Argument";
-import InputTest from "./chp08/InputTest";
-import ConfrimButtonFunction from "./chp08/ConfrimButtonFunction";
+import AppNumberList from "./chp10/ex1/AppNumberList";
+import StudentAttendance from "./chp10/ex2/StudentAttendance";
+import AttendanceCard from "./chp10/ex3/AttendanceCard";
+import MY from "./chp10/ex4/MY";
+
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,7 +23,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 setInterval(()=>{
     root.render(
         <React.StrictMode>
-            <ConfrimButtonFunction/>
+            <MY/>
         </React.StrictMode>
     );
 },1000)

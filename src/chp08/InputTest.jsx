@@ -1,7 +1,9 @@
 import React, {useState} from "react";
 
 function InputTest() {
+
     const[inputValue, setInputValue] = useState("");
+
     function handleChange(event) {
         setInputValue(event.target.value);
     }

@@ -17,6 +17,7 @@ const reservedNotifications=[
 ];
 
 var timer;
+
 class NotificationList extends React.Component{
     constructor(props) {
         super(props);

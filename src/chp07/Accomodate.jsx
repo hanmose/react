@@ -3,7 +3,7 @@ import useCounter from "./useCounter";
 
 const MAX_Count = 10;
 
-function Accomodate(props) {
+function Accomodate() {
     const [isFull, setIsFull] = useState(false);
     const [count, increaseCount, decreaseCount] = useCounter(0); //Custom useState 사용
 
