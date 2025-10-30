@@ -1,4 +1,5 @@
 import React from "react";
+import "./MY.css"; // CSS 분리
 
 const list = [
     {one:"https://picsum.photos/id/24/200/300",two:"Book",three:"책책책책책책"},
@@ -8,17 +9,15 @@ const list = [
     {one:"https://picsum.photos/id/28/200/300",two:"Forest",three:"산산산산산산"},
 ]
 
-var timer;
-
 function MY(){
     return(
-        <div>
-            {list.map(x=>(
-                <div>
-                    <div>
-                        <img src={x.one}/>
-                        {x.two}
-                        {x.three}
+        <div className="container">
+            {list.map((x, index)=>(
+                <div className="card" key={index}>
+                    <img src={x.one} alt={x.two} className="card-img"/>
+                    <div className="card-content">
+                        <h3 className="card-title">{x.two}</h3>
+                        <p className="card-text">{x.three}</p>
                     </div>
                 </div>
             ))}
