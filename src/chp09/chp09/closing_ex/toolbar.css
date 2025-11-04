@@ -1,0 +1,14 @@
+.wrapper{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid magenta;
+}
+.greeting{
+    margin-right: 15px;
+}
+h2{
+    margin: 20px;
+    padding: 15px;
+    border: 1px dotted darkorchid;
+}

@@ -14,6 +14,7 @@ import AppNumberList from "./chp10/ex1/AppNumberList";
 import StudentAttendance from "./chp10/ex2/StudentAttendance";
 import AttendanceCard from "./chp10/ex3/AttendanceCard";
 import MY from "./chp10/ex4/MY";
+import FruitSelect from "./chp11/ex2/FruitSelect";
 
 
 
@@ -23,7 +24,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 setInterval(()=>{
     root.render(
         <React.StrictMode>
-            <MY/>
+            <FruitSelect/>
         </React.StrictMode>
     );
 },1000)
