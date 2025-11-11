@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+
+.han-form {
+    width: 280px;
+    margin: 40px auto;
+    padding: 24px;
+    border-radius: 12px;
+    background: #f5f1e6; /* 한지 느낌 배경 */
+    border: 1px solid #d9d2c3;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    font-family: 'Gowun Batang', serif; /* 한국 전통체 */
+}
+
+.han-label {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 18px;
+    color: #3c2f21; /* 먹색 */
+}
+
+.han-input {
+    margin-left: 8px;
+    padding: 4px 6px;
+    border: 1px solid #b7a897;
+    background: #faf7f0;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.han-input:focus {
+    outline: none;
+    border-color: #6b4f2f;
+    box-shadow: 0 0 4px rgba(107,79,47,0.4);
+}
+
+.han-button {
+    display: block;
+    width: 100%;
+    margin-top: 14px;
+    padding: 10px 0;
+    background: #6b4f2f; /* 짙은 나무색 */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.han-button:hover {
+    background: #4b3722;
+}
+
+* {
+    cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABpElEQVR4nO2Wv0sDQRCHPxlUgmLQShdAQdBQ2CL4AhY2FGpoLmCpVGJgU1tqkYNmFNiPAYCcKEPME6nKqhkMGnPCxB8i3fO54OHznZ2Zyefefe93Zl3v1GQZhl7pF6xR/5JJkXjvAA54D/gXLgB7gP1zxdLJC2r9zTzVOVsv3q4E4ADuXN3YZqJbIsQCnAHeBOVJpm3nU8Yij+JYp0i1Z5UOxrUrtWKS6i9Ur6gtKvVVjK+yrcKxroRZ7E1krYglcm9ZpJgPYykN9XUSpp2QZ5eMoHqZtC2ZKn9hvxLDAZExEONpOUxTmVaJwW2owdGsmoY2q3WFqs5ZTyd9u0xWAT12lZxspA8k8ZUuAxnLanVG8gBn4G6lMZcMOZZ0nnw4A+zLKblYAZgfN8tJ2QtkA9n8cN6BWCjf2SPyGsxWTpmEv7IlzPmVnB2vxuY9rF9LkKm7P3mX9zLQI7gAfweLwD3gI7gHfgE/AQvAEXgDfgEPwVL69qwzZpmk0iRJBqNRiURhGEZRh/yC7dOqsXlPi8Uhb/5YhEIpFIJBIJx+5Af8AVTc1HUdM7csAAAAASUVORK5CYII=") 8 8, auto;
+}
+

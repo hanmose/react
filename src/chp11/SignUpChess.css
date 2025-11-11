@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+/* 1) 전체: 아이보리 체스보드 + 은은한 우드 텍스처 */
+:root{
+    --ivory:#f5f2ea;
+    --ivory-2:#ebe6da;
+    --brown:#5b4636;        /* 월넛 */
+    --brown-2:#3e3127;      /* 더 짙은 월넛 */
+    --ink:#2a2a2a;          /* 텍스트 */
+    --soft-outline:#d8d3c8;
+    --focus:#8b6f52;        /* 브라운 포커스 링 */
+}
+
+.chess-wrap {
+    min-height: 100dvh;
+    display:grid;
+    place-items:center;
+    padding:32px;
+    color:var(--ink);
+    font-family:"Noto Sans KR", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    background:
+        /* 아주 옅은 우드결(노이즈) */
+            radial-gradient(120% 80% at 70% 10%, rgba(0,0,0,0.02), rgba(0,0,0,0)) ,
+                /* 체스 보드(아이보리 2톤) */
+            linear-gradient(90deg, var(--ivory) 25%, transparent 25%, transparent 75%, var(--ivory) 75%),
+            linear-gradient(var(--ivory) 25%, transparent 25%, transparent 75%, var(--ivory) 75%),
+            var(--ivory-2);
+    background-size: 100% 100%, 64px 64px, 64px 64px, auto;
+    background-position: center, 0 0, 0 0, center;
+}
+
+/* 2) 카드: 종이 질감 느낌(매트), 금색/유리/네온 제거 */
+.signup-card {
+    width:min(720px, 92vw);
+    background: linear-gradient(180deg, #fff 0%, #faf8f1 100%);
+    border:1px solid var(--soft-outline);
+    border-radius:16px;
+    box-shadow:
+            0 10px 18px rgba(0,0,0,0.08),
+            0 2px 0 rgba(0,0,0,0.03) inset;
+    padding:28px 24px 30px;
+}
+
+/* 3) 제목: 토너먼트 공지 같은 클래식 서체 */
+.title {
+    font-family:"DM Serif Display", serif;
+    font-size: clamp(24px, 3.2vw, 34px);
+    letter-spacing:.2px;
+    color:var(--brown-2);
+    margin: 0 4px 18px;
+    display:flex; align-items:center; gap:10px;
+}
+.title::before{
+    content:"♝"; /* 비숍 아이콘(검은색 X, 그냥 텍스트) */
+    opacity:.8;
+}
+
+/* 4) 폼 레이아웃: 심플 그리드 */
+.signup-form{
+    display:grid;
+    gap:14px;
+    grid-template-columns:1fr;
+}
+@media (min-width:760px){
+    .signup-form{ grid-template-columns:1fr 1fr; }
+    .field:nth-child(5){ grid-column:1 / -1; }
+}
+
+/* 5) 필드 박스: 체스 칸처럼 가볍게 음영만 */
+.field{
+    display:grid; gap:8px;
+    background: linear-gradient(180deg, #ffffff, #fbfaf5);
+    border:1px solid var(--soft-outline);
+    border-radius:12px;
+    padding:12px 12px 10px;
+    transition: box-shadow .15s ease, transform .15s ease;
+}
+.field:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 8px 14px rgba(0,0,0,0.06);
+}
+
+/* 6) 라벨: 소문자/잔잔한 톤, 아이콘 심플 */
+.label{
+    font-size:13px;
+    color:#6f6a60;
+    letter-spacing:.1px;
+    display:inline-flex; align-items:center; gap:8px;
+    text-transform: none;
+}
+.label::before{ content:"•"; opacity:.6; }
+
+/* 7) 입력 공통: 매트한 아이보리 입력창 */
+.input, .select, .textarea{
+    width:100%;
+    border:1px solid var(--soft-outline);
+    background:#fff;
+    color:var(--ink);
+    border-radius:10px;
+    padding:12px 12px;
+    outline:none;
+    font-size:15px;
+    transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+    box-shadow: inset 0 1px 0 rgba(0,0,0,0.02);
+}
+.input::placeholder, .textarea::placeholder{ color:#9c9589; }
+
+/* 포커스: 브라운 링(과도한 발광 제거) */
+.input:focus, .select:focus, .textarea:focus{
+    border-color: var(--focus);
+    box-shadow: 0 0 0 3px rgba(139,111,82,0.18);
+    background:#fff;
+}
+
+/* 텍스트영역 높이 */
+.textarea{ min-height:120px; resize:vertical; }
+
+/* 셀렉트: 기본 화살표 유지(꾸밈 최소화) */
+.select{ appearance:auto; padding-right:12px; }
+
+/* 8) 버튼: 월넛 단색, 그림자 약하게 */
+.submit-btn{
+    grid-column:1 / -1;
+    margin-top:4px;
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    width:100%;
+    border:1px solid var(--brown);
+    background: var(--brown);
+    color:#f8f5ee;
+    font-weight:700;
+    letter-spacing:.2px;
+    padding:13px 16px;
+    border-radius:12px;
+    cursor:pointer;
+    transition: transform .12s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease;
+    font-family:"DM Serif Display", serif;
+}
+.submit-btn:hover{
+    transform: translateY(-1px);
+    background:#4d3d30;
+    border-color:#4d3d30;
+    box-shadow: 0 8px 14px rgba(0,0,0,0.10);
+}
+.submit-btn:active{
+    transform: none;
+    box-shadow: none;
+}
+
+/* 9) 소형 화면 보정 */
+@media (max-width:420px){
+    .signup-card{ padding:22px 16px 24px; }
+}

@@ -3,18 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import MainPageWarning from "./chp09/chp09/ex3/MainPageWarning";
-import Gtoggle from "./chp08/gong/Gtoggle";
-import Gtogglef from "./chp08/gong/Gtogglef";
-import InputTest from "./chp08/gong/InputTest";
-import GComment from "./chp05/exam01/gong/GComment";
-import NotificationList from "./chp06/NotificationList";
-import Accomodate from "./chp07/Accomodate";
-import AppNumberList from "./chp10/ex1/AppNumberList";
-import StudentAttendance from "./chp10/ex2/StudentAttendance";
-import AttendanceCard from "./chp10/ex3/AttendanceCard";
-import MY from "./chp10/ex4/MY";
-import FruitSelect from "./chp11/ex2/FruitSelect";
+import Reservation from "./chp11/ex3/Reservation";
+import SignUp from "./chp11/SignUp";
+import ConfirmBoilVerdict from "./chp12/ex1/ConfirmBoilVerdict";
+
 
 
 
@@ -24,7 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 setInterval(()=>{
     root.render(
         <React.StrictMode>
-            <FruitSelect/>
+            <ConfirmBoilVerdict/>
         </React.StrictMode>
     );
 },1000)
