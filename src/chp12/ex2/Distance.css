@@ -1,0 +1,176 @@
+/* 전체 화면: 도로 위에서 내려다본 느낌 */
+.road-root {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top, #374151 0%, #111827 55%, #020617 100%);
+    font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #f9fafb;
+}
+
+/* 도로 차선이 있는 중앙 도로 */
+.road-lane {
+    position: relative;
+    width: 80vw;
+    max-width: 960px;
+    min-height: 60vh;
+    border-radius: 36px;
+    background: #1f2933;
+    overflow: hidden;
+    box-shadow:
+            0 24px 60px rgba(0, 0, 0, 0.75),
+            inset 0 0 25px rgba(0, 0, 0, 0.8);
+}
+
+/* 왼쪽 흰 실선(차선 경계) */
+.road-lane::before,
+.road-lane::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: repeating-linear-gradient(
+            to bottom,
+            #e5e7eb 0,
+            #e5e7eb 20px,
+            transparent 20px,
+            transparent 40px
+    );
+}
+
+/* 왼쪽 라인 */
+.road-lane::before {
+    left: 10%;
+}
+
+/* 오른쪽 라인 */
+.road-lane::after {
+    right: 10%;
+}
+
+/* 중앙 노란 점선 (도로 한복판) */
+.road-lane::marker {}
+.road-lane > .road-center-line,
+.road-lane .road-center-line {
+    /* 필요시 쓸 여분 클래스용 – 여기서는 안 씀 */
+}
+
+.road-lane::marker {}
+
+/* 실제 중앙선: pseudo 대신 내부에 깔아주는 레이어 */
+.road-lane::marker {}
+
+.road-lane::after {}
+
+.road-lane::marker {}
+
+/* 중앙 노란 점선은 별도 레이어로 넣어주기 위해 pseudo 대신 배경 레이어 사용 */
+.road-lane {
+    background-image:
+        /* 중앙 노란 점선 */
+            linear-gradient(
+                    to bottom,
+                    transparent 0,
+                    transparent calc(50% - 3px),
+                    #facc15 calc(50% - 3px),
+                    #facc15 calc(50% + 3px),
+                    transparent calc(50% + 3px),
+                    transparent 100%
+            ),
+                /* 아스팔트 질감 */
+            radial-gradient(circle at 10% 10%, #4b5563 0, transparent 40px),
+            radial-gradient(circle at 80% 20%, #6b7280 0, transparent 60px),
+            radial-gradient(circle at 20% 80%, #4b5563 0, transparent 50px),
+            linear-gradient(#111827, #020617);
+    background-size:
+            100% 100%,
+            120% 120%,
+            120% 120%,
+            120% 120%,
+            100% 100%;
+}
+
+/* 도로 위에 떠 있는 UI 카드 */
+.road-content {
+    position: relative;
+    z-index: 1;
+    max-width: 480px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 24px 24px 28px;
+    border-radius: 24px;
+    background: rgba(15, 23, 42, 0.92);
+    box-shadow:
+            0 12px 30px rgba(0, 0, 0, 0.7),
+            0 0 0 1px rgba(148, 163, 184, 0.35);
+}
+
+/* 제목: 도로 간판 느낌 */
+.road-title {
+    margin: 0 0 18px;
+    text-align: center;
+    font-size: 1.4rem;
+    letter-spacing: 0.06em;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: #fefefe;
+    box-shadow: 0 10px 20px rgba(34, 197, 94, 0.45);
+}
+
+/* 입력 구역 */
+.road-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+/* DistanceInput 안의 legend / label 느낌 */
+.road-inputs legend {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    color: #e5e7eb;
+}
+
+/* 기본 input 공통 스타일 (DistanceInput의 input) */
+.road-inputs input[type="text"],
+.road-inputs input[type="number"] {
+    width: 100%;
+    padding: 9px 12px;
+    border-radius: 999px;
+    border: 1px solid #4b5563;
+    background: rgba(15, 23, 42, 0.95);
+    color: #f9fafb;
+    outline: none;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    transition: border-color 0.17s ease, box-shadow 0.17s ease, background 0.17s ease;
+}
+
+.road-inputs input[type="text"]::placeholder,
+.road-inputs input[type="number"]::placeholder {
+    color: #6b7280;
+}
+
+.road-inputs input[type="text"]:focus,
+.road-inputs input[type="number"]:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.35);
+}
+
+/* 결과 텍스트 */
+.road-result {
+    margin: 0;
+    margin-top: 8px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #e5e7eb;
+    border-top: 1px dashed rgba(148, 163, 184, 0.5);
+    padding-top: 10px;
+}

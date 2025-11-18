@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import Reservation from "./chp11/ex3/Reservation";
 import SignUp from "./chp11/SignUp";
 import ConfirmBoilVerdict from "./chp12/ex1/ConfirmBoilVerdict";
+import DistanceConverter from "./chp12/ex2/DistanceConverter";
 
 
 
@@ -16,7 +17,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 setInterval(()=>{
     root.render(
         <React.StrictMode>
-            <ConfirmBoilVerdict/>
+            <DistanceConverter/>
         </React.StrictMode>
     );
 },1000)
