@@ -1,0 +1,96 @@
+:root {
+    --carpet-red: linear-gradient(180deg,#8b0000,#c50000 30%, #6b0000 100%);
+    --marble: #e6e6e6;
+    --gold: #d4b16a;
+    --shadow-dark: rgba(0,0,0,0.35);
+    --smoke: rgba(255,255,255,0.1);
+}
+
+/* FancyBorder 전체 */
+.FancyBorder {
+    position: relative;
+    margin: 60px auto;
+    padding: 60px;
+    border-radius: 12px;
+    background: var(--marble);
+    box-shadow: 0 20px 60px var(--shadow-dark);
+    max-width: 720px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* 좌우 대리석 기둥 */
+.FancyBorder::after {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    right: -40px;
+    bottom: -40px;
+    border-left: 30px solid var(--marble);
+    border-right: 30px solid var(--marble);
+    z-index: -1;
+    box-shadow: inset 0 0 60px rgba(0,0,0,0.25);
+}
+
+/* 중앙 레드카펫 */
+.FancyBorder::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) rotateX(12deg);
+    width: 70%;
+    height: 250%;
+    background: var(--carpet-red);
+    border-left: 10px solid var(--gold);
+    border-right: 10px solid var(--gold);
+    z-index: -2;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+}
+
+/* 연기 효과 */
+.smoke {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 200%;
+    height: 150%;
+    background: radial-gradient(circle, var(--smoke) 0%, transparent 60%);
+    transform: translateX(-50%) rotate(-10deg);
+    animation: smokeRise 6s linear infinite;
+    z-index: -1;
+}
+@keyframes smokeRise {
+    0% { transform: translateX(-50%) translateY(0) rotate(-10deg); opacity: 0.1; }
+    50% { transform: translateX(-50%) translateY(-30%) rotate(-10deg); opacity: 0.3; }
+    100% { transform: translateX(-50%) translateY(-60%) rotate(-10deg); opacity: 0; }
+}
+
+/* 빛 강조 */
+.light-glow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 60%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 0%, rgba(255,244,200,0.2), transparent 60%);
+    transform: translateX(-50%) rotateX(12deg);
+    filter: blur(30px);
+    z-index: -1;
+}
+
+/* 제목 */
+.Dialog-title {
+    font-family: "Cinzel", serif;
+    font-size: 42px;
+    color: #7d5c16;
+    margin-bottom: 20px;
+}
+
+/* 메시지 */
+.Dialog-message {
+    font-size: 18px;
+    color: #3d3527;
+    line-height: 1.6;
+}

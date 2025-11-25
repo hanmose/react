@@ -7,6 +7,9 @@ import Reservation from "./chp11/ex3/Reservation";
 import SignUp from "./chp11/SignUp";
 import ConfirmBoilVerdict from "./chp12/ex1/ConfirmBoilVerdict";
 import DistanceConverter from "./chp12/ex2/DistanceConverter";
+import Calculator from "./chp12/Calculator";
+import FancyBorder from "./chp13/FancyBorder";
+import WelcomeDialog from "./chp13/Dialog";
 
 
 
@@ -17,7 +20,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 setInterval(()=>{
     root.render(
         <React.StrictMode>
-            <DistanceConverter/>
+            <WelcomeDialog/>
         </React.StrictMode>
     );
 },1000)
