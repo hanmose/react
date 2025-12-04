@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Blocks from "./chp15/Blocks";
+import Alchemy from "./Gimal/Alchemy";
+import Constellation from "./Gimal/Constellation";
 
 
 
@@ -14,7 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 setInterval(()=>{
     root.render(
         <React.StrictMode>
-            <Blocks/>
+            <Constellation/>
         </React.StrictMode>
     );
 },1000)

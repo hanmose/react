@@ -1,0 +1,78 @@
+/* alchemy.css */
+
+/* ------------------ 변수 정의 ------------------ */
+:root {
+    --drop-zone-width: 500px;
+    --drop-zone-height: 420px;
+    --drop-zone-left: 48%;
+    --drop-zone-bottom: 6%;
+
+    --reset-left: 76%;
+    --reset-bottom: 75%;
+}
+
+/* ------------------ 기본 설정 ------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    background-color: #222;
+}
+
+.wrapper {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.3s ease-in-out;
+}
+
+.ingredients {
+    position: absolute;
+    top: 6.7%;
+    left: 47%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+}
+
+.ingredient {
+    cursor: grab;
+    transition: opacity 0.3s ease;
+    user-select: none;
+}
+
+.drop-zone {
+    position: absolute;
+    width: var(--drop-zone-width);
+    height: var(--drop-zone-height);
+    left: var(--drop-zone-left);
+    bottom: var(--drop-zone-bottom);
+    transform: translateX(-50%);
+    background: transparent;
+    border: none;
+    z-index: 5;
+    pointer-events: auto;
+}
+
+.reset-button {
+    position: absolute;
+    bottom: var(--reset-bottom);
+    left: var(--reset-left);
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+}

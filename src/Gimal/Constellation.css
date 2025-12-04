@@ -1,35 +1,43 @@
-html, body, .star-container {
-    width: 100%;
+@import url("./font/Dokdo.css");
+
+html, body {
     height: 100%;
     margin: 0;
     overflow: hidden;
 }
 
-.star-container {
+.center-text {
+    position: absolute;
+    z-index: 1000;
+}
+
+body {
+    background-image: url("./image/ExNight.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    font-family: "Cafe24Decobox";
-    color: white;
+    font-family: 'Cafe24Decobox';
     position: relative;
-    z-index: 0;
+    color: white;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .group {
     position: absolute;
     cursor: pointer;
     font-weight: bold;
-    font-size: 150px;
-    background: transparent; /* 배경 가림 방지 */
-    pointer-events: auto;
-    z-index: 3;
 }
 
-.group.a { left: 20%; top: 25%; }
-.group.b { left: 73%; top: 10%; }
-.group.c { left: 20%; top: 60%; }
-.group.d { left: 70%; top: 65%; }
-.group.e { left: 55%; top: 47%; }
+.group.a { left: 20%; top: 25%; font-size: 150px; }
+.group.b { left: 73%; top: 10%; font-size: 150px; }
+.group.c { left: 20%; top: 60%; font-size: 150px; }
+.group.d { left: 70%; top: 65%; font-size: 150px; }
+.group.e { left: 55%; top: 47%; font-size: 150px; }
 
 .center-text {
     position: absolute;
@@ -41,14 +49,14 @@ html, body, .star-container {
     transition: opacity 0.3s ease;
     pointer-events: none;
     white-space: nowrap;
-    z-index: 5;
+    font-family: 'Dokdo';
 }
 
-.group.a:hover ~ .a-text,
-.group.b:hover ~ .b-text,
-.group.c:hover ~ .c-text,
-.group.d:hover ~ .d-text,
-.group.e:hover ~ .e-text {
+.group.a:hover ~ .center-text.a-text,
+.group.b:hover ~ .center-text.b-text,
+.group.c:hover ~ .center-text.c-text,
+.group.d:hover ~ .center-text.d-text,
+.group.e:hover ~ .center-text.e-text {
     opacity: 1;
 }
 
